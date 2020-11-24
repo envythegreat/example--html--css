@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Spreadsheet</title>
+    <style>
+      *{
+        font-family: cursive
+      }
+      .container{
+        /*La propriété display spécifie le comportement d'affichage (le type de boîte de rendu) d'un élément*/
+        display: flex; /* none /  inline / grid */
+/*        display: none; hide the element*/
+/*        display: grid; Affiche un élément en tant que conteneur de grille au niveau du bloc*/
+      }
+      .my-Card{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        /*Les transitions CSS vous permettent de modifier les valeurs de propriété en douceur, sur une durée donnée.*/
+        transition: 0.4s; /*changez la valeur en une durée différente et survolez la carte*/
+        width: 300px;
+        border-radius: 10px;
+        position: relative;
+        margin: 10px
+      }
+      .my-Card:hover{
+        box-shadow: 15px 15px 10px 0 rgba(0,0,0,0.2);
+      }
+      img{
+        width: 100%;
+        height: 200px;
+        border-radius: 10px 10px 0 0 ;
+      }
+      .my-Card p {
+        text-align: justify;
+        font-size: 12px;
+        font-weight: bold;
+        padding:  0.5rem 1rem
+      }
+      .btn--container{
+        width: 100%;
+/*        justify-content: center;*/
+/*        border: 1px solid;*/
+        text-align: center;
+        padding: 5px 0 15px 0;
+      }
+      .btn--container input {
+        border: none;
+        width: 90px;
+        height: 30px;
+        color: snow
+      }
+      .btn--container input:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      .small-span{
+        /*La propriété position spécifie le type de méthode de positionnement utilisé pour un élément*/
+        position: absolute; /* fixed / sticky ... */
+        /*pour positionner un élément sur la page et changer où doit être affiché nous utilisons {top / left / bottom / right}*/
+        /*pour changer l'élément sur le côté droit, nous utilisons la propriété right et commentons la propriété left*/
+        top: 0;
+/*        left: 15px;*/
+        right: 15px;
+        
+        
+        color: #000;
+        background-color: lightcoral;
+        font-size: 12px;
+        padding: 5px;
+        /*Spécifiez si les lignes de texte sont disposées horizontalement ou verticalement*/
+        writing-mode: vertical-rl; /* horizontal-tb  / vertical-lr*/
+        border-radius: 0px 0px 10px 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="my-Card">
+        <span class="small-span">totam</span>
+        <img alt="hhhh" src="./72838_p0.jpg"/>
+        <p>
+          Lorem ipsum dolor sit amet, ......... ero hic totam maiores soluta saepe.
+        </p>
+        <div class="btn--container">
+          <input 
+            type="button" 
+            name="one" value="one"  
+            style="background-color:crimson"
+          />
+          <input 
+            type="button"
+            name="two" value="two" 
+            style="background-color:coral"
+          />
+          <input 
+            type="button"
+            name="three" value="three"
+            style="background-color:cornflowerblue"
+          />
+        </div>
+      </div>
+      <!-- pour voir la puissance de la propriété display , ajoutez plus de carte au container div -->
+<!--
+      <div class="my-Card">
+        <span class="small-span">totam</span>
+        <img alt="hhhh" src="./72838_p0.jpg"/>
+        <p>
+          Lorem ipsum dolor sit amet, ......... ero hic totam maiores soluta saepe.
+        </p>
+        <div class="btn--container">
+          <input 
+            type="button" 
+            name="one" value="one"  
+            style="background-color:crimson"
+          />
+          <input 
+            type="button"
+            name="two" value="two" 
+            style="background-color:coral"
+          />
+          <input 
+            type="button"
+            name="three" value="three"
+            style="background-color:cornflowerblue"
+          />
+        </div>
+      </div>
+-->
+    </div>
+  </body>
+
+  
+</html>
